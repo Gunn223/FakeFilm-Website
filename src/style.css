@@ -271,6 +271,7 @@ footer {
   width: 100%;
   justify-content: center;
   flex-direction: column;
+  gap: 30px;
 }
 #formFilter select {
   padding: 5px;
