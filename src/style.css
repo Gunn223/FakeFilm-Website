@@ -87,18 +87,13 @@ main > #btn {
   margin: 0 auto;
   cursor: pointer;
 }
-.container {
-  flex-grow: 1;
+#slick-container {
   margin: 0 auto;
   display: flex;
-  justify-content: start;
-  align-items: start;
   flex-wrap: wrap;
   width: 90%;
-  border: 1px solid black;
-  box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.5);
-  padding: 5px;
 }
+
 #card-black {
   border: 1px solid;
 }
@@ -111,13 +106,7 @@ main > #btn {
 
   overflow: hidden;
 }
-.card-img-top {
-  display: flex;
-  min-width: 100%;
-  min-height: 100%;
-  background-size: cover;
-  /* buat agar gambar penuh dalam card */
-}
+
 .body-card {
   background-color: rgba(225, 225, 225, 1);
 }
@@ -194,14 +183,13 @@ section {
   padding-top: 20px;
   margin: 0 auto;
 }
-.container-flex {
+.container-allFilm {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
-  
 }
 /* footer */
 footer {
@@ -232,16 +220,23 @@ footer {
   color: #7a0728;
   font-weight: 100;
 }
+.container {
+  /* border: 1px solid; */
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .container-filter {
   display: flex;
-  width: 90%;
+  justify-content: space-between;
+  width: 100%;
   gap: 15px;
-  margin: 0 auto;
   flex-direction: row-reverse;
 }
 #filterFilm {
   flex-grow: 1;
-  width: 310px;
 
   display: flex;
   flex-direction: column;
@@ -250,6 +245,26 @@ footer {
   border: 1px solid black;
   box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.5);
   padding: 5px;
+}
+#Film-Terbaru {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+
+  border: 1px solid black;
+  box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.5);
+  padding: 5px;
+}
+#containerContent {
+  margin-top: 2rem;
+  border: 1px solid black;
+  box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.5);
+  padding: 5px;
+}
+#containerRekomFilm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 #formFilter {
   display: flex;

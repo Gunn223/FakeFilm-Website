@@ -105,7 +105,7 @@ const DisplayFilmTerbaru = (result) => {
 const DisplayAllFilm = (data) => {
   data.forEach((item) => {
     // console.log(item.show.genres);
-    const conntainerCards = document.querySelector('.container-flex');
+    const conntainerCards = document.querySelector('.container-allFilm');
     const card = `
     <div class="cards-main">
     <img src=${item.show.image.medium} alt="image" width="100%" height="170px">
