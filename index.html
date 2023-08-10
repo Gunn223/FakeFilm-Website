@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Dunia Film</title>
+   <!-- slick -->
+   <link rel="stylesheet" type="text/css" href="src/Libraries/slick-1.8.1/slick/slick.css"/>
+   <link rel="stylesheet" type="text/css" href="src/Libraries/slick-1.8.1/slick/slick-theme.css"/>
+   <!-- vanila css -->
+   <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+   <header>
+      <div class="container-header ">
+         <div class="header-navbar">
+            <h1>Dunia Film</h1>
+         <form action="" id="form">
+            <input type="text" name="search" id='searchInput' placeholder="Search for film">
+            <ul id="searchResults"></ul>
+         </form>
+      </div>
+      <nav>
+         <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Genre</a></li>
+            <li><a href="">Series</a></li>
+            <li><a href="">Popular</a></li>
+            <li><a href="">Negara</a></li>
+         </ul>
+      </nav>
+   </div>
+   </header>
+   <main>
+      <div class="container" id="slick-container">
+      </div>
+      <button id="btn" class="">Lihat Semua Film Unggulan</button>
+   </main>
+
+   <section>
+      <h1 class="h1-title">Film Terbaru</h1>
+      <div class="container-filter">
+         <div id="filterFilm">
+            <h1>Filter Movies</h1>
+            <form  action="" id="formFilter">
+               <select name="genre" id="genre">
+                  <option disabled>--Genres--</option>
+                  <option value="Drama">Drama</option>
+                  <option value="Action">Action</option>
+                  <option value="Comedy">Comedy</option>
+                  <option value="Action">Action</option>
+               </select>
+               <select name="Tahun" id="tahun">
+                  <option disabled>--Tahun--</option>
+                  <option value="2023">2023</option>
+                  <option value="2022">2022</option>
+                  <option value="2021">2021</option>
+                  <option value="2020">2020</option>
+               </select>
+               <div>
+                  <button id="filter-btn" type="submit">Filter Movie</button>
+               </div>
+            </form>
+         </div>
+   
+         <div class="container" id="Film-Terbaru">
+         </div>
+      </div>
+   </section>
+   <section>
+      <h1 class="h1-title">Film Rekomnedasi</h1>
+      <div class="container" id="containerRekomFilm">
+        
+
+      </div>
+   </section>
+   <!-- buat bagian rekomendasi film dan film terpopuler di dapat melalui filter rating menggunakan reduce  -->
+   <!-- buat agar class container hanya memiliki 1 container untuk id di gunakan untuk aped card class  -->
+   <!-- buat text lurus dengan content card -->
+   <section>
+      <h1>Semua Film</h1>
+      <div class="container-flex">
+      </div>
+   </section>
+
+   <footer>
+      <div class="container-item">
+
+         <div class="item-footer">
+            <h2>Dunia 21</h2>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos, dolor! Consectetur sit tenetur debitis iusto voluptas dolorum officia provident perferendis quidem ipsam, laborum dolorem, autem error in atque fugiat impedit.</div>
+         <div class="item-footer">
+            <h2>Label Film</h2>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit doloribus aliquam sapiente doloremque nam et quia aliquid aspernatur eveniet in voluptatem quis consequuntur eaque dolorum sunt fugiat voluptas, voluptate maxime atque provident magnam soluta cum! Error eum velit nostrum voluptas?</div>
+         <div>
+      </div>
+   </div>
+         <h3>Design By Admin</h3>
+   </footer>
+   <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+   <script src="src/app.js"></script>
+   <script src="src/jquery-3.7.0.min.js"></script>
+   <script type="text/javascript" src="src/Libraries/slick-1.8.1/slick/slick.min.js"></script>
+   <script>
+      $(document).ready(()=>{
+         $('#slick-container').slick({
+            infinite: true,
+            slidesToShow: 7 ,
+            slidesToScroll: 7
+          });
+          $('#next-btn').click(()=>{
+            $('#slick-container').slick('slickNext');
+          });
+          $('#prev-btn').click(()=>{
+            $('#slick-container').slick('slickPrev');
+          });
+      })
+   </script>
+</body>
+</html>
