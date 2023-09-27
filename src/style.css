@@ -60,11 +60,13 @@ nav ul li a:hover {
   width: 200px;
   max-height: 150px;
   overflow-y: auto;
+ overflow-x: hidden ;
 }
 
-#searchResults li {
+#searchResults li{
   padding: 8px 12px;
   cursor: pointer;
+  color: black;
 }
 
 #searchResults li:hover {
@@ -193,6 +195,8 @@ section {
 }
 /* footer */
 footer {
+  position: relative;
+  bottom: 0;
   margin: 20px 0 0;
   background-color: black;
   color: wheat;
@@ -224,13 +228,14 @@ footer {
   /* border: 1px solid; */
   width: 90%;
   margin: 0 auto;
+
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .container-filter {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   gap: 15px;
   flex-direction: row-reverse;
@@ -262,9 +267,11 @@ footer {
   padding: 5px;
 }
 #containerRekomFilm {
-  display: flex;
+ display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 15px;
+ 
 }
 #formFilter {
   display: flex;

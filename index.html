@@ -12,6 +12,7 @@
 </head>
 <body>
    <header>
+   
       <div class="container-header ">
          <div class="header-navbar">
             <h1>Dunia Film</h1>
@@ -33,14 +34,15 @@
    </header>
    <main>
       <div  id="slick-container">
+         
       </div>
       <button id="btn" class="">Lihat Semua Film Unggulan</button>
    </main>
    
    <section class="container">
       <h1 class="h1-title">Film Terbaru</h1>
-      <div class="container-filter">
-         <div id="filterFilm">
+      <!-- <div class="container-filter"> -->
+         <!-- <div id="filterFilm">
             <h1>Filter Movies</h1>
             <form  action="" id="formFilter">
                <select name="genre" id="genre">
@@ -57,14 +59,7 @@
                   <option value="2021">2021</option>
                   <option value="2020">2020</option>
                </select>
-               <select name="genre" id="genre">
-                  <option >--Negara--</option>
-                  <option value="japan">Japan</option>
-                  <option value="indonesia">Indonesia</option>
-                  <option value="thailand">Thailand</option>
-                  <option value="china">China</option>
-               </select>
-               <select name="Tahun" id="tahun">
+               <select name="Series" id="series">
                   <option >--Movie/Series--</option>
                   <option value="movie">movie</option>
                   <option value="series">series</option>
@@ -74,11 +69,10 @@
                   <button id="filter-btn" type="submit">Filter Movie</button>
                </div>
             </form>
-         </div>
-   
+         </div> -->
          <div id="Film-Terbaru">
          </div>
-      </div>
+      <!-- </div> -->
    </section>
    <section class="container" id="containerContent">
       <h1 class="h1-title">Film Rekomnedasi</h1>
@@ -88,6 +82,7 @@
    <!-- buat bagian rekomendasi film dan film terpopuler di dapat melalui filter rating menggunakan reduce  -->
    <!-- buat agar class container hanya memiliki 1 container untuk id di gunakan untuk aped card class  -->
    <!-- buat text lurus dengan content card -->
+   <!-- tambahnkan bintang di rating di card -->
    <section class="container" id="containerContent">
       <h1>Semua Film</h1>
       <div class="container-allFilm">
@@ -107,17 +102,18 @@
       </div>
    </div>
          <h3>Design By Admin</h3>
+        
    </footer>
    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
-   <script src="src/app.js"></script>
+   <script type="module" src="src/app.js"></script>
    <script src="src/jquery-3.7.0.min.js"></script>
    <script type="text/javascript" src="src/Libraries/slick-1.8.1/slick/slick.min.js"></script>
    <script>
       $(document).ready(()=>{
          $('#slick-container').slick({
             infinite: true,
-            slidesToShow: 7 ,
-            slidesToScroll: 7
+            slidesToShow: 6,
+            slidesToScroll: 6
           });
           $('#next-btn').click(()=>{
             $('#slick-container').slick('slickNext');

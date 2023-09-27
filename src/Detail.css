@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.header-navbar {
+  display: flex;
+  padding: 10px 0;
+  background-color: #c70039;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+}
+.header-navbar > h1 {
+  font-size: 2.5rem;
+  font-style: italic;
+  color: white;
+  margin: 0 0 0 60px;
+}
+.header-navbar form > input {
+  padding: 8px 14px;
+  /* background-color: rgba(225, 225, 225, 0.3); */
+  border: 1px solid white;
+  border-radius: 5px;
+}
+nav ul {
+  margin: 0;
+  display: flex;
+  gap: 20px;
+  background-color: #900c3f;
+}
+
+nav ul li,
+a {
+  list-style-type: none;
+  text-decoration: none;
+  padding: 6px 5px;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: white;
+}
+nav ul li a:hover {
+  background-color: #f94c10;
+  color: #f8de22;
+  border-radius: 10px;
+}
+
+.search-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+#searchResults {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  width: 200px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+#searchResults li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+#searchResults li:hover {
+  background-color: #e5e5e5;
+}
+/* main */
+main {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+}
+.container {
+  width: 100%;
+  margin-top: 30px;
+
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+
+  gap: 5px;
+
+}
+.isImageMain {
+   flex-grow: 1;
+}
+.isShowInfo {
+  flex-grow: 1;
+   padding: 5px;
+  border: 1px solid black;
+  box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.5);
+}
+.isDetailMain {
+   width: 50%;
+ 
+}
+/* buat tampilan sama dengan tv api dan costum tampilan buat semua responsivex */
+.line-heightInfo {
+  line-height: 0.7;
+}
+/* footer */
+footer {
+   position: static;
+   bottom: 0;
+   margin: 20px 0 0;
+   background-color: black;
+   color: wheat;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+ }
+ .container-item {
+   display: flex;
+   width: 90%;
+ }
+ .item-footer {
+   flex-grow: 1;
+ }
