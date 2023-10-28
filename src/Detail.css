@@ -84,20 +84,18 @@ main {
   justify-content: center;
 
   gap: 5px;
-
 }
 .isImageMain {
-   flex-grow: 1;
+  flex-grow: 1;
 }
 .isShowInfo {
   flex-grow: 1;
-   padding: 5px;
+  padding: 5px;
   border: 1px solid black;
   box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.5);
 }
 .isDetailMain {
-   width: 50%;
- 
+  width: 50%;
 }
 /* buat tampilan sama dengan tv api dan costum tampilan buat semua responsivex */
 .line-heightInfo {
@@ -105,20 +103,47 @@ main {
 }
 /* footer */
 footer {
-   position: static;
-   bottom: 0;
-   margin: 20px 0 0;
-   background-color: black;
-   color: wheat;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
- }
- .container-item {
-   display: flex;
-   width: 90%;
- }
- .item-footer {
-   flex-grow: 1;
- }
+  position: static;
+  bottom: 0;
+  margin: 20px 0 0;
+  background-color: black;
+  color: wheat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container-item {
+  display: flex;
+  width: 90%;
+}
+.item-footer {
+  flex-grow: 1;
+}
+.search-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+#searchResults {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  width: 200px;
+  max-height: 150px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#searchResults li {
+  padding: 8px 12px;
+  cursor: pointer;
+  color: black;
+}
+
+#searchResults li:hover {
+  background-color: #e5e5e5;
+}

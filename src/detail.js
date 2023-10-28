@@ -46,5 +46,41 @@ const DisplayFilmDetail = (data) => {
 };
 
 getDetailData(id);
+const form = document.querySelector('#form');
+form.addEventListener('input', async (e) => {
+  e.preventDefault();
+  try {
+    document.querySelectorAll('#searchResults li').forEach((li) => li.remove());
+    const keyword = form.elements.search.value;
+    const config = {
+      params: {
+        q: keyword,
+      },
+    };
+    const res = await axios.get('https://api.tvmaze.com/search/shows', config);
+
+    addData(res.data);
+  } catch (err) {
+    console.log(err.message);
+  }
+});
+const addData = (names) => {
+  for (let res of names) {
+    if (res.show.name) {
+      const ul = document.querySelector('#searchResults');
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.append(li);
+      li.append(res.show.name);
+
+      ul.append(a);
+      a.href = `Detail.html?id=${res.show.id}`;
+
+      a.addEventListener('click', () => {
+        window.location.href = `https://www.tvmaze.com/shows/${res.show.id}`;
+      });
+    }
+  }
+};
 
 export { DisplayFilmDetail, getDetailData };

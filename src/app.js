@@ -1,6 +1,4 @@
 //lihat semua film ungulan
-const butonFilmUnggunlan = document.querySelector('#btn');
-butonFilmUnggunlan.addEventListener('click', () => (window.location.href = 'FavoritePageFilm.html'));
 // live search
 const form = document.querySelector('#form');
 form.addEventListener('input', async (e) => {
@@ -20,7 +18,6 @@ form.addEventListener('input', async (e) => {
     console.log(err.message);
   }
 });
-// tambahkan fitur search ketika link di tekan akan langsung ke bagian profile film
 
 const addData = (names) => {
   for (let res of names) {
@@ -52,7 +49,6 @@ async function GetAllData(keyword) {
     const res = await axios.get('https://api.tvmaze.com/search/shows', config);
 
     const responseData = res.data ? res.data : null;
-    // atasi eror di console
 
     DisplayAllFilm(responseData);
     DisplayFavoriteFilm(responseData);
@@ -62,19 +58,6 @@ async function GetAllData(keyword) {
     console.log(error);
   }
 }
-
-// form Filter
-// coba buat setiap fungsi untuk menerapkan logic
-// const formFilter = document.querySelector('#formFilter');
-// formFilter.addEventListener('submit', async (e) => {
-//   e.preventDefault();
-//   const selectedTahun = document.querySelector('#tahun').value;
-//   const selectedSeries = document.querySelector('#series').value;
-//   const selectedGenre = document.querySelector('#genre').value;
-
-//   const selectedItem = [selectedSeries, selectedGenre, selectedTahun];
-
-// });
 
 const DisplayFavoriteFilm = (data) => {
   const containerCard = document.querySelector('#slick-container');
@@ -94,7 +77,7 @@ const DisplayFavoriteFilm = (data) => {
       </div>
       </div>
       </a>`;
-      containerCard.insertAdjacentHTML('beforeend', card);
+      containerCard.innerHTML += card;
     }
   });
 };

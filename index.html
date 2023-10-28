@@ -24,10 +24,9 @@
       <nav>
          <ul>
             <li><a href="">Home</a></li>
-            <li><a href="">Genre</a></li>
-            <li><a href="">Series</a></li>
-            <li><a href="">Popular</a></li>
-            <li><a href="">Negara</a></li>
+            <li><a href="#">Genre</a></li>
+            <li><a href="#">Popular</a></li>
+            <li><a href="#">Negara</a></li>
          </ul>
       </nav>
    </div>
@@ -36,40 +35,11 @@
       <div  id="slick-container">
          
       </div>
-      <button id="btn" class="">Lihat Semua Film Unggulan</button>
    </main>
    
    <section class="container">
       <h1 class="h1-title">Film Terbaru</h1>
-      <!-- <div class="container-filter"> -->
-         <!-- <div id="filterFilm">
-            <h1>Filter Movies</h1>
-            <form  action="" id="formFilter">
-               <select name="genre" id="genre">
-                  <option >--Genres--</option>
-                  <option value="Drama">Drama</option>
-                  <option value="Action">Action</option>
-                  <option value="Comedy">Comedy</option>
-                  <option value="Action">Action</option>
-               </select>
-               <select name="Tahun" id="tahun">
-                  <option >--Tahun--</option>
-                  <option value="2023">2023</option>
-                  <option value="2022">2022</option>
-                  <option value="2021">2021</option>
-                  <option value="2020">2020</option>
-               </select>
-               <select name="Series" id="series">
-                  <option >--Movie/Series--</option>
-                  <option value="movie">movie</option>
-                  <option value="series">series</option>
-                 
-               </select>
-               <div>
-                  <button id="filter-btn" type="submit">Filter Movie</button>
-               </div>
-            </form>
-         </div> -->
+   
          <div id="Film-Terbaru">
          </div>
       <!-- </div> -->
@@ -84,7 +54,7 @@
    <!-- buat text lurus dengan content card -->
    <!-- tambahnkan bintang di rating di card -->
    <section class="container" id="containerContent">
-      <h1>Semua Film</h1>
+      <h1>Film Unggulan</h1>
       <div class="container-allFilm">
       </div>
    </section>
@@ -101,7 +71,7 @@
          <div>
       </div>
    </div>
-         <h3>Design By Admin</h3>
+         <h3>Design By me</h3>
         
    </footer>
    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
@@ -112,8 +82,8 @@
       $(document).ready(()=>{
          $('#slick-container').slick({
             infinite: true,
-            slidesToShow: 6,
-            slidesToScroll: 6
+            slidesToShow: 5,
+            slidesToScroll: 5
           });
           $('#next-btn').click(()=>{
             $('#slick-container').slick('slickNext');
